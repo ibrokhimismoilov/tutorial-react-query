@@ -2,15 +2,16 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 
-const fetchColors = (pageNumber) => {
-  return axios.get(`http://localhost:4000/colors?_limit=2&_page=${pageNumber}`);
+const fetchColors = (args) => {
+  console.log("args", args);
+  return axios.get(`http://localhost:4000/colors?_limit=2&_page=${1}`);
 };
 
 const PaginatedQueries = () => {
   const [pageNumber, setPageNumber] = useState(1);
-  const { data, error, isError } = useQuery(
+  const { data, error, isError, isFetching } = useQuery(
     ["colors", pageNumber],
-    () => fetchColors(pageNumber),
+    fetchColors,
     { keepPreviousData: true }
   );
 

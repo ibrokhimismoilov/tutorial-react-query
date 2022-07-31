@@ -12,7 +12,7 @@ const RQSuperHerosPage = () => {
   };
 
   const { isLoading, data, isError, error, isFetching, refetch } =
-    useSuperHeroesData(onSuccess, onError);
+    useSuperHeroesData("super-heroes", onSuccess, onError);
 
   if (isLoading && isFetching) {
     return <h1>Loading...</h1>;
@@ -29,9 +29,7 @@ const RQSuperHerosPage = () => {
 
       {data.data.map((item) => (
         <p key={item.id}>
-          <Link to={`/rq-super-heros/${item.id}`}>
-            {item.name}
-          </Link>
+          <Link to={`/rq-super-heros/${item.id}`}>{item.name}</Link>
         </p>
       ))}
     </>

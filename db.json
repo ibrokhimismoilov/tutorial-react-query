@@ -14,6 +14,21 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "keen",
+      "alterEgo": "aaaa",
+      "id": 4
+    },
+    {
+      "name": "keen1",
+      "alterEgo": "aaaa1",
+      "id": 5
+    },
+    {
+      "name": "fasfsf",
+      "alterEgo": "sadfsfasdf",
+      "id": 6
     }
   ],
   "friends": [
@@ -39,7 +54,11 @@
   "channels": [
     {
       "id": "ibrokhimismoilov",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "colors": [
